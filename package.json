@@ -2,6 +2,7 @@
   "name": "retmorse",
   "version": "1.0.0",
   "main": "src/index.js",
+  "description": "morse to txt and txt to morse.",
   "scripts": {
     "start": "node src/index.js"
   },
@@ -11,5 +12,8 @@
   },
   "author": "Leydson Andrey",
   "license": "ISC",
-  "description": ""
+  "keywords": ["morse"],
+  "bugs": {
+    "url": "https://github.com/Retangulo-org/retmorse/issues"
+  }
 }
