@@ -62,33 +62,26 @@ const invertedMorse = Object.fromEntries(
 );
 
 const TxtToMorse = (input) => {
-	let inputToLowerCase = input.toLocaleLowerCase();
-	let array = [];
+	let inputToLowerCase = input
+		.toLocaleLowerCase()
+		.replace(/^\s+|\s+$/g, "")
+		.replace(/\s+/g, " ");
 	let string = "";
 
 	for (var key in inputToLowerCase) {
-		array.push(morse[inputToLowerCase[key]]);
-		array.push(" ");
+		string += morse[inputToLowerCase[key]];
+		string += " ";
 	}
 
-	for (var key in array) {
-		string += array[key];
-	}
-
-	return string.replace(/^\s+|\s+$/g, "");
+	return string;
 };
 
 const MorseToTxt = (input) => {
-	let array = [];
+	let removeExtraSpaces = input.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
 	let string = "";
-	let removeSpaces = input.replace(/^\s+|\s+$/g, "");
 
-	for (var key in removeSpaces.split(" ")) {
-		array.push(invertedMorse[removeSpaces.split(" ")[key]]);
-	}
-
-	for (var key in array) {
-		string += array[key];
+	for (var key in removeExtraSpaces.split(" ")) {
+		string += invertedMorse[removeExtraSpaces.split(" ")[key]];
 	}
 
 	return string;
