@@ -61,7 +61,7 @@ const invertedMorse = Object.fromEntries(
 	Object.entries(morse).map(([key, value]) => [value, key])
 );
 
-function TxtToMorse(input) {
+const TxtToMorse = (input) => {
 	let inputToLowerCase = input.toLocaleLowerCase();
 	let array = [];
 	let string = "";
@@ -76,9 +76,9 @@ function TxtToMorse(input) {
 	}
 
 	return string.replace(/^\s+|\s+$/g, "");
-}
+};
 
-function MorseToTxt(input) {
+const MorseToTxt = (input) => {
 	let array = [];
 	let string = "";
 	let removeSpaces = input.replace(/^\s+|\s+$/g, "");
@@ -92,4 +92,6 @@ function MorseToTxt(input) {
 	}
 
 	return string;
-}
+};
+
+export { TxtToMorse, MorseToTxt };

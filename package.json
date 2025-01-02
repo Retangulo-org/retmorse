@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "description": "morse to txt and txt to morse.",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js"
   },
