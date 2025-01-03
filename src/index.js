@@ -73,7 +73,7 @@ const TxtToMorse = (input) => {
 		string += " ";
 	}
 
-	return string;
+	return string.replace(/^\s+|\s+$/g, "");
 };
 
 const MorseToTxt = (input) => {
