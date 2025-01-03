@@ -1,6 +1,6 @@
 {
   "name": "retmorse",
-  "version": "1.0.3",
+  "version": "2.1.5",
   "main": "src/index.js",
   "description": "morse to txt and txt to morse.",
   "type": "module",
