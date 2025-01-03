@@ -1,8 +1,8 @@
-# RETMORSE
+# retmorse .-. . - -- --- .-. ... .
 
 Tradutor de código morse.
 
-## Como usar
+## Como instalar
 
 Instalar:
 
@@ -13,11 +13,71 @@ npm install retmorse
 Usar:
 
 ```js
-import { TxtToMorse, MorseToTxt } from "retmorse";
+import { retmorse } from "retmorse";
 
-console.log(TxtToMorse("lorem ipsum"));
+console.log(retmorse.toMorse("lorem ipsum"));
 // output: .-.. --- .-. . -- / .. .--. ... ..- --
 
-console.log(MorseToTxt(".-.. --- .-. . -- / .. .--. ... ..- --"));
+console.log(retmorse.toTxt(".-.. --- .-. . -- / .. .--. ... ..- --"));
 // output: lorem ipsum
 ```
+
+## Como é traduzido
+
+| Caractere | Código Morse |
+| :-------: | :----------: |
+| a         | .-           |
+| b         | -...         |
+| c         | -.-.         |
+| d         | -..          |
+| e         | .            |
+| f         | ..-.         |
+| g         | --.          |
+| h         | ....         |
+| i         | ..           |
+| j         | .---         |
+| k         | -.-          |
+| l         | .-..         |
+| m         | --           |
+| n         | -.           |
+| o         | ---          |
+| p         | .--.         |
+| q         | --.-         |
+| r         | .-.          |
+| s         | ...          |
+| t         | -            |
+| u         | ..-          |
+| v         | ...-         |
+| w         | .--          |
+| x         | -..-         |
+| y         | -.--         |
+| z         | --..         |
+| 0         | -----        |
+| 1         | .----        |
+| 2         | ..---        |
+| 3         | ...--        |
+| 4         | ....-        |
+| 5         | .....        |
+| 6         | -....        |
+| 7         | --...        |
+| 8         | ---..        |
+| 9         | ----.        |
+| .         | .-.-.-       |
+| ,         | --..--       |
+| ?         | ..--..       |
+| '         | .----.       |
+| !         | -.-.--       |
+| (         | -.--.        |
+| )         | -.--.-       |
+| &         | .-...        |
+| :         | ---...       |
+| ;         | -.-.-.       |
+| =         | -...-        |
+| +         | .-.-.        |
+| -         | -....-       |
+| \_        | ..--.-       |
+| "         | .-..-.       |
+| $         | ...-..-      |
+| @         | .--.-.       |
+| (espaço)  | /            |
+| /         | (espaço)     |

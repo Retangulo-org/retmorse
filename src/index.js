@@ -60,30 +60,33 @@ const invertedMorse = Object.fromEntries(
 	Object.entries(morse).map(([key, value]) => [value, key])
 );
 
-const TxtToMorse = (input) => {
-	let inputToLowerCase = input
-		.toLocaleLowerCase()
-		.replace(/^\s+|\s+$/g, "")
-		.replace(/\s+/g, " ");
-	let string = "";
+const retmorse = {
+	toMorse: function (input) {
+		let formatedInput = input
+			.toLowerCase()
+			.replace(/^\s+|\s+$/g, "")
+			.replace(/\s+/g, " ");
+		let string = "";
 
-	for (var key in inputToLowerCase) {
-		string += morse[inputToLowerCase[key]];
-		string += " ";
-	}
+		for (var key in formatedInput) {
+			string += morse[formatedInput[key]];
+			string += " ";
+		}
 
-	return string.replace(/^\s+|\s+$/g, "");
+		return string.replace(/^\s+|\s+$/g, "");
+	},
+	toTxt: function (input) {
+		let formatedInput = input.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
+		let string = "";
+
+		for (var key in formatedInput.split(" ")) {
+			string += invertedMorse[formatedInput.split(" ")[key]];
+		}
+
+		return string;
+	},
 };
 
-const MorseToTxt = (input) => {
-	let removeExtraSpaces = input.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
-	let string = "";
+console.log(retmorse.toMorse("retmorse"));
 
-	for (var key in removeExtraSpaces.split(" ")) {
-		string += invertedMorse[removeExtraSpaces.split(" ")[key]];
-	}
-
-	return string;
-};
-
-export { TxtToMorse, MorseToTxt };
+export { retmorse };
