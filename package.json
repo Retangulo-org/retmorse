@@ -5,7 +5,8 @@
   "description": "morse to txt and txt to morse.",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   ],
   "bugs": {
     "url": "https://github.com/Retangulo-org/retmorse/issues"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
   }
 }
